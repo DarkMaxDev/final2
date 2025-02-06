@@ -13,10 +13,11 @@ function findTotal(productCart, products) {
   return sum;
 }
 
-function TotalProducts() {
+const TotalProducts= () =>  {
   const { productCart, products } = useSelector((state) => state);
   let dispatch = useDispatch();
   useEffect(() => {
+
     async function fetchData() {
       let products = await getProducts();
       dispatch(setProducts(products.data));
@@ -35,18 +36,18 @@ function TotalProducts() {
             );
           })
         ) : (
-          <h3 style={{ textAlign: "center" }}>No Item in Carts</h3>
+          <h3 style={{ textAlign: "center" }}>No Items</h3>
         )}
       </div>
       <div className="right__Cart">
         <div>
-          <div>Total </div> <div className="cart__price"> ₹ {totalAmount} </div>
+          <div>Total </div> <div className="cart__price"> $ {totalAmount} </div>
         </div>
         <div>
           <div>Discount </div> <div> {0} </div>
         </div>
         <div>
-          <div>Total </div> <div className="cart__price"> ₹ {totalAmount} </div>
+          <div>Total </div> <div className="cart__price"> $ {totalAmount} </div>
         </div>
         <button onClick={() => dispatch(checkout())}>checkout Product</button>
       </div>

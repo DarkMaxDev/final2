@@ -47,16 +47,16 @@
     border-radius: 2px;
   }
   .addToCart_button {
-    background-color: #ff9f00;
+    background-color: #46adf1;
   }
   .buyNow_button {
-    background-color: #fb641b;
+    background-color: #6bf1e6;
   }
   .rating {
     display: inline;
     padding: 1px 15px;
     font-size: 1.1rem;
-    background: #26a541;
+    background: #79d7ee;
     border-radius: 99px;
     font-weight: 700;
     color: white;

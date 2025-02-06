@@ -16,6 +16,8 @@ export default function Cart() {
     }
     fetchProduct(productId);
   }, [productId]);
+
+
   const [isPresent, setPresent] = useState(false);
 
   const dispatch = useDispatch();
@@ -37,7 +39,6 @@ export default function Cart() {
     !isPresent && dispatch(increment(id));
   }
 
-  // console.log(getProduct);
   return (
     <div className="product_details">
       <div className="left_product_details">
@@ -68,14 +69,14 @@ export default function Cart() {
       <div className="right_product_details">
         <div className="title">{getProduct?.title}:</div>
         <div className="price">
-          <span className="rupee">₹</span>
+          <span className="rupee">$</span>
           {getProduct?.price}
         </div>
         <div className="rating">
           {getProduct?.rating?.rate} <span className="start_icon">★</span>
         </div>
         <div className="description">
-          <h4>Product Details:</h4>
+          <h4>Product Details :</h4>
           <div className="product__description"> {getProduct?.description}</div>
         </div>
       </div>
